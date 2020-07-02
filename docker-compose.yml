@@ -1,0 +1,20 @@
+version: "3.5"
+
+services:
+
+  my_service:
+    build: .
+    volumes:
+      - ${STORAGE_DIR}/tmp_arxiv:/app/parser/arxiv
+      - ${STORAGE_DIR}/tmp_pdf:/app/parser/pdf
+      - ${STORAGE_DIR}/tmp_tar:/app/parser/tar
+      - ${STORAGE_DIR}/tmp_task:/app/parser/task
+      - ${STORAGE_DIR}/tmp_xml:/app/parser/xml
+
+    secrets:
+      - keys
+
+secrets:
+  keys:
+    file: ./configs/config.ini
+    

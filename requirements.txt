@@ -1,0 +1,10 @@
+requests
+arxiv
+tqdm
+watchdog
+pdftotext
+boto
+lxml
+mmh3
+pdfparser.six
+ujson
